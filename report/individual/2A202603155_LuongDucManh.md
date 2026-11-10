@@ -9,7 +9,7 @@
 - Email: 369ldmanh@gmail.com
 - Lớp: K5-L2A
 - Link repo bài làm:https://github.com/ldmanh610/K5-L2-DAY02-LuongDucManh-2A202603155-ObjectDetection
-- Link Colab đã chạy: 
+- Link Colab đã chạy: https://colab.research.google.com/drive/1GmIGBUqGeqjPGSxoWEQmeOlJetc5FFHU#scrollTo=0f04d1c9
 
 ## 2. Schema và mini guideline
 
