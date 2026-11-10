@@ -4,12 +4,12 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Email:
-- Lớp:
-- Link repo bài làm:
-- Link Colab đã chạy:
+- Họ tên:LuongDucManh
+- MSSV: 2A202603155
+- Email: 369ldmanh@gmail.com
+- Lớp: K5-L2
+- Link repo bài làm:https://github.com/ldmanh610/K5-L2-DAY02-LuongDucManh-2A202603155-ObjectDetection
+- Link Colab đã chạy: 
 
 ## 2. Schema và mini guideline
 
@@ -17,11 +17,33 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). Tóm tắt ba ca mơ h
 
 ## 3. Annotation và self-QC
 
-- Số file nhãn train:
+- Số file nhãn train: 50
+
 - Kết quả checker và lỗi đã xử lý:
+  - Chạy:
+    python tools/check_yolo_labels.py
+  - Kết quả:
+    ĐẠT cấu trúc: 50/50 file nhãn hợp lệ.
+
 - Danh sách ít nhất 10 ảnh đã rà bằng mắt:
+  - drive_001
+  - drive_005
+  - drive_010
+  - drive_016
+  - drive_024
+  - drive_027
+  - drive_028
+  - drive_037
+  - drive_041
+  - drive_050
+
 - Lỗi bỏ sót/box/class phát hiện khi rà và cách sửa:
+  - Điều chỉnh box sát vật thể hơn.
+  - Bỏ các xe quá nhỏ ở xa.
+  - Bổ sung một số xe bị che khuất nhưng vẫn nhận diện được.
+
 - Commit khóa nhãn ban đầu:
+  - (Điền commit hash GitHub của bạn)
 
 ## 4. Gold QC và rework
 
