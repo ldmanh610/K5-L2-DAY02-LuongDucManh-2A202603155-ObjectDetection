@@ -43,22 +43,42 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). Tóm tắt ba ca mơ h
   - Bổ sung một số xe bị che khuất nhưng vẫn nhận diện được.
 
 - Commit khóa nhãn ban đầu:
-  - (Điền commit hash GitHub của bạn)
+  -  e2edf15 Add files via upload
 
 ## 4. Gold QC và rework
 
 | Chỉ số | Trước sửa | Sau sửa nếu có |
 |---|---:|---:|
-| TP | | |
-| FP | | |
-| FN | | |
-| Precision | | |
-| Recall | | |
-| F1 | | |
-| mean_iou_of_matches | | |
-| passed | | |
+| TP | 404 | 399 |
+| FP | 317 | 295 |
+| FN | 249 | 254 |
+| Precision | 0.5603 | 0.5749 |
+| Recall | 0.6187 | 0.6110 |
+| F1 | 0.5881 | 0.5924 |
+| mean_iou_of_matches | 0.8571 | 0.8574 |
+| passed | false | false |
 
-Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ.
+Dẫn tới outputs/annotation_evaluation.json.
+
+Đã thực hiện một vòng rework sau khi nhận gold labels.
+
+Các ảnh có sai lệch lớn gồm:
+- drive_002
+- drive_024
+- drive_026
+- drive_027
+- drive_041
+- drive_050
+
+Các điều chỉnh:
+- Giảm số lượng box trên xe rất nhỏ ở xa.
+- Rà lại xe bị che khuất.
+- Điều chỉnh class đối với các trường hợp dễ nhầm giữa car và van.
+
+Kết quả sau rework:
+- Precision tăng nhẹ.
+- Mean IoU duy trì ở mức cao (>0.85).
+- F1 vẫn chưa đạt ngưỡng yêu cầu 0.80.
 
 ## 5. Kết quả YOLO
 
