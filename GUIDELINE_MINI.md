@@ -6,10 +6,10 @@
 
 | Lớp | Định nghĩa của bạn | Ví dụ/điểm phân biệt |
 | --- | --- | --- |
-| `car` | Con xe phục vụ người đi bộ giao thông. | Kích thước nhỏ hơn bus và truck, thường 4–7 chỗ, tỷ lệ  mới hơn các xe khác, có mũi nhọn giống các kiểu mũ đi . |
-| `truck` | Xe tải chở hàng hoặc xe đầu kéo.| Có khoang hàng hoặc thùng tải riêng biệt, thường giao động vật thể tư cân bằng xe khong bị  |
-| `bus` |Xe buýt hoặc xe khách chở nhiều hành khách. |Thân dài, nhiều cửa sổ, sức chứa lớn, tỷ lệ hay có mấy quảng cáo của: nhãn hàng, người nổi tiếng, nghiên cứu đột phá , tiếp thị không âm thanh |
-| `van` |Xe van hoặc minivan chở người/hàng | Kích thước lớn hơn car nhưng nhỏ hơn bus, thân hộp kín, tỷ lệ có mũi nhọn như con hải cẩu|
+| `car` | Xe con dùng để chở người như sedan, hatchback, SUV, taxi hoặc pickup cỡ nhỏ. | Kích thước nhỏ hơn bus và truck, thường từ 4–7 chỗ. |
+| `truck` | Xe tải chở hàng hoặc xe đầu kéo. | Có thùng hàng hoặc khoang chở hàng riêng biệt. |
+| `bus` | Xe buýt hoặc xe khách chở nhiều hành khách. | Thân dài, nhiều cửa sổ, sức chứa lớn. |
+| `van` | Xe van hoặc minivan dùng để chở người hoặc hàng hóa. | Kích thước lớn hơn car nhưng nhỏ hơn bus, thân xe dạng hộp. |
 
 ## Quy tắc chung
 
@@ -22,6 +22,6 @@
 
 | Ảnh | Tình huống | Quyết định cuối | Lý do theo schema |
 | --- | --- | --- | --- |
-| `drive_001.jpg` | xe `truck` sau xe `car` sau cột | Gán `truck` | Vẫn nhận diện được loại xe từ phần còn nhìn thấy |
-| `drive_016.jpg` | xe `car` lấp sau hàng cây cảnh quan đô thị | Gán `car` | Suy đoán phần nằm trong khung hình trước và sau dự đoán chuyển động|
-| `drive_037.jpg` | xe `car` vượt khỏi khung hình máy cố định một góc |Vẽ box chạm mép ảnh | Quy tắc không suy đoán phần nằm ngoài khung hình|
+| `drive_001.jpg` | Xe truck bị che một phần phía sau xe khác | Gán `truck` | Vẫn nhận diện được loại xe từ phần còn nhìn thấy |
+| `drive_016.jpg` | Xe car bị che một phần bởi cây xanh | Gán `car` | Vẫn nhận diện được loại xe từ phần thân xe còn nhìn thấy |
+| `drive_037.jpg` | Xe car bị cắt bởi mép ảnh | Vẽ box chạm mép ảnh | Chỉ box phần nhìn thấy được, không suy đoán phần ngoài khung hình |
